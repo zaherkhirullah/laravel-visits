@@ -1,0 +1,44 @@
+{
+  "name": "hayrullah/laravel-helpers",
+  "description": "Helper functions use to upload files and delete, force delete, restore global functions.",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "keywords": [
+    "helper",
+    "laravel-helpers",
+    "controller",
+    "model",
+    "helper functions",
+    "upload images",
+    "crud",
+    "delete record",
+    "force delete record",
+    "restore record"
+  ],
+  "authors": [
+    {
+      "name": "Zahir Hayrullah",
+      "email": "info@zaherr.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "ext-curl": "*",
+    "laravel/framework": "^5.5|^6.0|^7.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Hayrullah\\Helpers\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Hayrullah\\Helpers\\HelperServiceProvider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateVisitsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('visits', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->morphs('visitable');
+            $table->text('info')->nullable();
+            $table->string('ip', 255)->nullable();
+            $table->string('previous', 300)->nullable();
+            $table->string('current', 300)->nullable();
+            $table->string('src', 255)->nullable();
+            $table->string('locale', 255)->nullable();
+            $table->string('domain', 255)->nullable();
+            $table->string('location', 255)->nullable();
+            $table->string('iso_code', 255)->nullable();
+            $table->string('country', 255)->nullable();
+            $table->string('city', 255)->nullable();
+            $table->string('state', 255)->nullable();
+            $table->string('state_name', 255)->nullable();
+            $table->string('postal_code', 255)->nullable();
+            $table->string('lat', 255)->nullable();
+            $table->string('lon', 255)->nullable();
+            $table->string('timezone', 255)->nullable();
+            $table->string('continent', 255)->nullable();
+            $table->string('currency', 255)->nullable();
+            $table->string('org', 255)->nullable();
+            $table->string('device', 255)->nullable();
+            $table->string('device_model', 255)->nullable();
+            $table->string('network', 255)->nullable();
+            $table->string('placement', 255)->nullable();
+            $table->string('utm_campaign', 255)->nullable();
+            $table->string('utm_content', 255)->nullable();
+            $table->string('utm_medium', 255)->nullable();
+            $table->string('utm_source', 255)->nullable();
+            $table->string('keyword', 255)->nullable();
+            $table->string('match_type', 255)->nullable();
+            $table->string('ad_position', 255)->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('visits');
+    }
+}
