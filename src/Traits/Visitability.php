@@ -7,12 +7,9 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
- * This file is part of Laravel visits,
+ * This file is part of Laravel visits,.
  *
  * @license MIT
- * @package Hayrullah/laravel-visits
- *
- * Copyright (c) 2016 Christian Kuri
  */
 trait Visitability
 {
@@ -28,8 +25,8 @@ trait Visitability
 
     /**
      * Return a collection with the User visitsd Model.
-     * The Model needs to have the visitsable trait
-     * 
+     * The Model needs to have the visitsable trait.
+     *
      * @param  $class *** Accepts for example: Post::class or 'App\Post' ****
      *
      * @return Collection
@@ -47,9 +44,9 @@ trait Visitability
 
     /**
      * Add the object to the User visitss.
-     * The Model needs to have the visitsable trai
-     * 
-     * @param Object $object
+     * The Model needs to have the visitsable trai.
+     *
+     * @param object $object
      */
     public function addvisits($object)
     {
@@ -58,9 +55,9 @@ trait Visitability
 
     /**
      * Remove the Object from the user visitss.
-     * The Model needs to have the visitsable trai
-     * 
-     * @param Object $object
+     * The Model needs to have the visitsable trai.
+     *
+     * @param object $object
      */
     public function removevisits($object)
     {
@@ -69,9 +66,9 @@ trait Visitability
 
     /**
      * Toggle the visits status from this Object from the user visitss.
-     * The Model needs to have the visitsable trai
-     * 
-     * @param Object $object
+     * The Model needs to have the visitsable trai.
+     *
+     * @param object $object
      */
     public function togglevisits($object)
     {
@@ -80,10 +77,11 @@ trait Visitability
 
     /**
      * Check if the user has visitsd this Object
-     * The Model needs to have the visitsable trai
-     * 
-     * @param Object $object
-     * @return boolean
+     * The Model needs to have the visitsable trai.
+     *
+     * @param object $object
+     *
+     * @return bool
      */
     public function isvisitsd($object)
     {
@@ -92,10 +90,11 @@ trait Visitability
 
     /**
      * Check if the user has visitsd this Object
-     * The Model needs to have the visitsable trai
-     * 
-     * @param Object $object
-     * @return boolean
+     * The Model needs to have the visitsable trai.
+     *
+     * @param object $object
+     *
+     * @return bool
      */
     public function hasvisitsd($object)
     {
