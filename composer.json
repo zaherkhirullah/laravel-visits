@@ -1,20 +1,20 @@
 {
-  "name": "hayrullah/laravel-helpers",
-  "description": "Helper functions use to upload files and delete, force delete, restore global functions.",
+  "name": "hayrullah/laravel-visits",
+  "description": "This Library improved to record request visits and make statistics for all links which visited.",
   "type": "library",
   "license": "MIT",
   "minimum-stability": "dev",
   "keywords": [
-    "helper",
-    "laravel-helpers",
-    "controller",
-    "model",
-    "helper functions",
-    "upload images",
-    "crud",
-    "delete record",
-    "force delete record",
-    "restore record"
+    "visits",
+    "laravel-visits",
+    "visitors",
+    "page visitor",
+    "link visits",
+    "visit country",
+    "visit statistics",
+    "visit records",
+    "Visits map",
+    "visit counter"
   ],
   "authors": [
     {
@@ -31,13 +31,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Hayrullah\\Helpers\\": "src/"
+      "Hayrullah\\LaravelVisits\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Hayrullah\\Helpers\\HelperServiceProvider"
+        "Hayrullah\\LaravelVisits\\VisitServiceProvider"
       ]
     }
   }
