@@ -9,7 +9,7 @@
 ![PHP Composer](https://github.com/zaherkhirullah/laravel-visits/workflows/PHP%20Composer/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/github/license/zaherkhirullah/laravel-visits)](https://github.com/zaherkhirullah/laravel-visits)
 [![Quality Score](https://img.shields.io/scrutinizer/g/zaherkhirullah/laravel-visits.svg?style=flat-square)](https://scrutinizer-ci.com/g/zaherkhirullah/laravel-visits)
-[![StyleCI](https://styleci.io/repos/253813301/shield)](https://styleci.io/repos/253813301)
+[![StyleCI](https://styleci.io/repos/264623457/shield)](https://styleci.io/repos/264623457)
 
 ### 
 
