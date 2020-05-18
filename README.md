@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/hayrullah/laravel-visits.svg?style=flat-square)](https://packagist.org/packages/hayrullah/laravel-visits)
 [![GitHub issues](https://img.shields.io/github/issues/zaherkhirullah/laravel-visits)](https://github.com/zaherkhirullah/laravel-visits/issues)
 [![GitHub forks](https://img.shields.io/github/forks/zaherkhirullah/laravel-visits)](https://github.com/zaherkhirullah/laravel-visits/network)
-![CI](https://github.com/zaherkhirullah/laravel-visits/workflows/CI/badge.svg)
+![PHP Composer](https://github.com/zaherkhirullah/laravel-visits/workflows/PHP%20Composer/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/github/license/zaherkhirullah/laravel-visits)](https://github.com/zaherkhirullah/laravel-visits)
 [![Quality Score](https://img.shields.io/scrutinizer/g/zaherkhirullah/laravel-visits.svg?style=flat-square)](https://scrutinizer-ci.com/g/zaherkhirullah/laravel-visits)
 [![StyleCI](https://styleci.io/repos/253813301/shield)](https://styleci.io/repos/253813301)
