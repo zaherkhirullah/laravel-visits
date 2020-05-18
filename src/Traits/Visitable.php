@@ -8,12 +8,9 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * This file is part of Laravel Visit,
+ * This file is part of Laravel Visit,.
  *
  * @license MIT
- * @package ChristianKuri/laravel-favorite
- *
- * Copyright (c) 2016 Christian Kuri
  */
 trait Visitable
 {
@@ -28,7 +25,7 @@ trait Visitable
     }
 
     /**
-     * Add this Object to the user visits
+     * Add this Object to the user visits.
      *
      * @param int $user_id [if  null its added to the auth user]
      */
@@ -73,10 +70,9 @@ trait Visitable
     }
 
     /**
-     * Remove this Object from the user visits
+     * Remove this Object from the user visits.
      *
      * @param int $user_id [if  null its added to the auth user]
-     *
      */
     public function removeVisit($user_id = null)
     {
@@ -84,7 +80,7 @@ trait Visitable
     }
 
     /**
-     * Toggle the favorite status from this Object
+     * Toggle the favorite status from this Object.
      *
      * @param int $user_id [if  null its added to the auth user]
      */
@@ -94,11 +90,11 @@ trait Visitable
     }
 
     /**
-     * Check if the user has favorited this Object
+     * Check if the user has favorited this Object.
      *
      * @param int $user_id [if  null its added to the auth user]
      *
-     * @return boolean
+     * @return bool
      */
     public function isVisited($user_id = null)
     {
@@ -120,7 +116,7 @@ trait Visitable
     }
 
     /**
-     * Count the number of visits
+     * Count the number of visits.
      *
      * @return int
      */
@@ -138,7 +134,7 @@ trait Visitable
     }
 
     /**
-     * Add deleted observer to delete visits registers
+     * Add deleted observer to delete visits registers.
      *
      * @return void
      */
@@ -153,7 +149,6 @@ trait Visitable
 
     private function getUserId($user_id = null)
     {
-
         $user_id = ($user_id) ? $user_id : null;
         if (!$user_id) {
             \auth()->check() ? Auth::id() : null;
@@ -182,5 +177,4 @@ trait Visitable
 
         return $details;
     }
-
 }
