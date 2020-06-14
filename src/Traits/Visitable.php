@@ -2,7 +2,7 @@
 
 namespace Hayrullah\LaravelVisits\Traits;
 
-use Hayrullah\LaravelVisits\Models\Visit;
+use Hayrullah\LaravelVisits\Models\Like;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Support\Facades\Auth;
@@ -21,7 +21,7 @@ trait Visitable
      */
     public function visits()
     {
-        return $this->morphMany(Visit::class, 'visitable');
+        return $this->morphMany(Like::class, 'visitable');
     }
 
     /**
@@ -33,12 +33,12 @@ trait Visitable
     {
         $user_id = $this->getUserId($user_id);
 
-        $visit = new Visit(['user_id' => $user_id]);
+        $visit = new Like(['user_id' => $user_id]);
 
         $visit->ip = $this->getIp();
         $visit->previous = request()->previous;
 
-        $details = $this->getIpDetails();
+        $details = $this->getIpDetails($visit->ip);
         $visit->domain = url('/');
         $visit->iso_code = $details->country ?? null;
         $visit->country = $details->country ?? null;
@@ -166,7 +166,7 @@ trait Visitable
         return request()->ip();
     }
 
-    private function getIpDetails()
+    private function getIpDetails($ip)
     {
         $details = json_decode(file_get_contents("https://ipinfo.io/{$ip}?token=f5e0d2a13bc766"));
         if (!$details) {

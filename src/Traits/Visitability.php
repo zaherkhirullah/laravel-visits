@@ -2,7 +2,7 @@
 
 namespace Hayrullah\LaravelVisits\Traits;
 
-use Hayrullah\LaravelVisits\Models\Visit;
+use Hayrullah\LaravelVisits\Models\Like;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -18,9 +18,9 @@ trait Visitability
      *
      * @return HasMany
      */
-    public function visitss()
+    public function visits()
     {
-        return $this->hasMany(Visit::class, 'user_id');
+        return $this->hasMany(Like::class, 'user_id');
     }
 
     /**
@@ -31,11 +31,11 @@ trait Visitability
      *
      * @return Collection
      */
-    public function visits($class)
+    public function visitors($class)
     {
-        return $this->visitss()->where('visitsable_type', $class)->with('visitsable')->get()->mapWithKeys(function ($item) {
-            if (isset($item['visitsable'])) {
-                return [$item['visitsable']->id=>$item['visitsable']];
+        return $this->visits()->where('visitable_type', $class)->with('visitable')->get()->mapWithKeys(function ($item) {
+            if (isset($item['visitable'])) {
+                return [$item['visitable']->id => $item['visitable']];
             }
 
             return [];
@@ -43,60 +43,60 @@ trait Visitability
     }
 
     /**
-     * Add the object to the User visitss.
+     * Add the object to the User visits.
      * The Model needs to have the visitsable trai.
      *
      * @param object $object
      */
-    public function addvisits($object)
+    public function addVisit($object)
     {
-        $object->addvisits($this->id);
+        $object->addVisit($this->id);
     }
 
     /**
-     * Remove the Object from the user visitss.
-     * The Model needs to have the visitsable trai.
+     * Remove the Object from the user visits.
+     * The Model needs to have the visitable trai.
      *
      * @param object $object
      */
-    public function removevisits($object)
+    public function removeVisit($object)
     {
-        $object->removevisits($this->id);
+        $object->removeVisit($this->id);
     }
 
     /**
-     * Toggle the visits status from this Object from the user visitss.
-     * The Model needs to have the visitsable trai.
+     * Toggle the visits status from this Object from the user visits.
+     * The Model needs to have the visitable trai.
      *
      * @param object $object
      */
-    public function togglevisits($object)
+    public function toggleVisit($object)
     {
-        $object->togglevisits($this->id);
+        $object->toggleVisits($this->id);
     }
 
     /**
-     * Check if the user has visitsd this Object
-     * The Model needs to have the visitsable trai.
+     * Check if the user has visits this Object
+     * The Model needs to have the visitable trai.
      *
      * @param object $object
      *
      * @return bool
      */
-    public function isvisitsd($object)
+    public function isVisited($object)
     {
-        return $object->isvisitsd($this->id);
+        return $object->isVisited($this->id);
     }
 
     /**
-     * Check if the user has visitsd this Object
-     * The Model needs to have the visitsable trai.
+     * Check if the user has visited this Object
+     * The Model needs to have the visitable trai.
      *
      * @param object $object
      *
      * @return bool
      */
-    public function hasvisitsd($object)
+    public function hasVisit($object)
     {
         return $object->isvisitsd($this->id);
     }
